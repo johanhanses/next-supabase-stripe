@@ -16,7 +16,7 @@ export default async function handler(
   const signingSecret = process.env.STRIPE_SIGNING_SECRET
   const reqBuffer = await buffer(req)
 
-  let event
+  let event: any
 
   try {
     event = stripe.webhooks.constructEvent(
