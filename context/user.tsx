@@ -11,7 +11,7 @@ export default function UserProvider({
   children: React.ReactNode
 }) {
   const router = useRouter()
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(undefined as any)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
