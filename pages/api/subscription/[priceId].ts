@@ -48,8 +48,8 @@ export default async function handler(
       payment_method_types: ['card'],
       mode: 'subscription',
       line_items: lineItems,
-      success_url: 'http://localhost:3000/payment/success',
-      cancel_url: 'http://localhost:3000/payment/cancelled'
+      success_url: `${process.env.CLIENT_URL}/payment/success`,
+      cancel_url: `${process.env.CLIENT_URL}/payment/cancelled`
     })
 
     res.send({ id: session.id })
