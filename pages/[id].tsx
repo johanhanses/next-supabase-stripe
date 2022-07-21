@@ -2,8 +2,8 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 import { useEffect, useState } from 'react'
 import { supabase } from '../utils/supabase'
-import { ILesson, IPremiumContent } from './interface'
 import Video from 'react-player'
+import { ILesson, IPremiumContent } from '../interface'
 
 export default function LessonDetails({ lesson }: { lesson: ILesson }) {
   const [videoUrl, setVideoUrl] = useState('')

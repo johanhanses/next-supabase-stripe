@@ -1,6 +1,6 @@
 import Link from 'next/link'
+import { ILessons } from '../interface'
 import { supabase } from '../utils/supabase'
-import { ILessons } from './interface'
 
 export default function Home({ lessons }: ILessons) {
   return (

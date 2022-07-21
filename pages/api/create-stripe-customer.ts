@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import Stripe from 'stripe'
+import { IUser } from '../../interface'
 import { getServiceSupabase } from '../../utils/supabase'
-import { IUser } from '../interface'
 
 interface IRequestParams extends NextApiRequest {
   record: IUser
