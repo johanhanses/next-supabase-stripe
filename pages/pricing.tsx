@@ -30,9 +30,12 @@ export default function Pricing({ plans }: ISubscriptionPlans) {
         sessionId: data.id
       })
     } catch (error) {
-      console.log(data)
-
-      console.error('Error processing subscription', error)
+      console.error(
+        'Error processing subscription:',
+        error,
+        'Data error: ',
+        data
+      )
     }
   }
 
