@@ -17,6 +17,9 @@ export const Nav = () => {
       <Link href="/pricing">
         <a className="ml-2 hover:text-gray-500">Pricing</a>
       </Link>
+      <Link href="/about">
+        <a className="ml-2 hover:text-gray-500">About</a>
+      </Link>
 
       <div className="ml-auto">
         {user ? (

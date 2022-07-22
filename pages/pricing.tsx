@@ -3,18 +3,7 @@ import Stripe from 'stripe'
 import { loadStripe } from '@stripe/stripe-js'
 import { useUser } from '../context/user'
 import Link from 'next/link'
-
-interface ISubscriptionPlan {
-  id: string
-  name: string
-  price: number
-  interval: Stripe.Price.Recurring.Interval | undefined
-  currency: string
-}
-
-interface ISubscriptionPlans {
-  plans: ISubscriptionPlan[]
-}
+import { ISubscriptionPlan, ISubscriptionPlans } from '../interface'
 
 export default function Pricing({ plans }: ISubscriptionPlans) {
   const { user, login, isLoading } = useUser()

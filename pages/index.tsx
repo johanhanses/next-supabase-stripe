@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ILesson, ILessons } from '../interface'
+import { ILessons } from '../interface'
 import { supabase } from '../utils/supabase'
 
 export default function Home({ lessons }: ILessons) {
@@ -18,6 +18,6 @@ export default function Home({ lessons }: ILessons) {
 
 export const getStaticProps = async () => {
   const { data: lessons } = await supabase.from<ILessons>('lesson').select('*')
-  const sortedLessons = lessons?.sort((a, b) => a.id - b.id)
-  return { props: { sortedLessons } }
+
+  return { props: { lessons } }
 }

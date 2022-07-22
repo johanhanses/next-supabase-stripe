@@ -1,3 +1,5 @@
+import Stripe from 'stripe'
+
 export interface IPremiumContent {
   id: number | string
   video_url: string
@@ -12,11 +14,22 @@ export interface ILesson {
 }
 
 export interface ILessons {
-  id?: any
   lessons: ILesson[]
 }
 
 export interface IUser {
   id: string
   email: string
+}
+
+export interface ISubscriptionPlan {
+  id: string
+  name: string
+  price: number
+  interval: Stripe.Price.Recurring.Interval | undefined
+  currency: string
+}
+
+export interface ISubscriptionPlans {
+  plans: ISubscriptionPlan[]
 }
