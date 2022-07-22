@@ -21,7 +21,7 @@ export default function Pricing({ plans }: ISubscriptionPlans) {
 
   const processSubscription = async (planId: ISubscriptionPlan['id']) => {
     const { data } = await axios.get(`/api/subscription/${planId}`)
-
+    console.log(data)
     if (data.id) {
       const stripe = await loadStripe(
         process.env.NEXT_PUBLIC_STRIPE_KEY as string
