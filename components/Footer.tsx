@@ -5,7 +5,7 @@ export default function Footer() {
         href="https://johanhanses.com"
         target="_blank"
         rel="noreferrer"
-        className="text-center block hover:text-gray-500"
+        className="text-center block hover:text-gray-500 mb-12"
       >
         johanhanses.com
       </a>
