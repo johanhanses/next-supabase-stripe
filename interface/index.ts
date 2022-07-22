@@ -12,6 +12,7 @@ export interface ILesson {
 }
 
 export interface ILessons {
+  id?: any
   lessons: ILesson[]
 }
 
