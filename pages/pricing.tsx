@@ -21,6 +21,7 @@ export default function Pricing({ plans }: ISubscriptionPlans) {
 
   const processSubscription = async (planId: ISubscriptionPlan['id']) => {
     const { data } = await axios.get(`/api/subscription/${planId}`)
+
     try {
       const stripe = await loadStripe(
         process.env.NEXT_PUBLIC_STRIPE_KEY as string
@@ -30,12 +31,7 @@ export default function Pricing({ plans }: ISubscriptionPlans) {
         sessionId: data.id
       })
     } catch (error) {
-      console.error(
-        'Error processing subscription:',
-        error,
-        'Data error: ',
-        data
-      )
+      console.error('Error processing subscription:')
     }
   }
 
